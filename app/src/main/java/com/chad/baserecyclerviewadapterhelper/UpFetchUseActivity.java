@@ -30,7 +30,7 @@ public class UpFetchUseActivity extends BaseActivity {
         setTitle("UpFetch Use");
         setContentView(R.layout.activity_data_binding_use);
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.rv);
+        mRecyclerView = findViewById(R.id.rv);
         mAdapter = new UpFetchAdapter();
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setAdapter(mAdapter);

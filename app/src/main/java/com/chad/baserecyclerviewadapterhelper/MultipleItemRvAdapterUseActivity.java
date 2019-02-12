@@ -35,7 +35,7 @@ public class MultipleItemRvAdapterUseActivity extends BaseActivity {
         setTitle("MultipleItemRvAdapter");
         setBackBtn();
 
-        RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.rv_list);
+        RecyclerView mRecyclerView = findViewById(R.id.rv_list);
         GridLayoutManager manager = new GridLayoutManager(this, 4);
         mRecyclerView.setLayoutManager(manager);
 

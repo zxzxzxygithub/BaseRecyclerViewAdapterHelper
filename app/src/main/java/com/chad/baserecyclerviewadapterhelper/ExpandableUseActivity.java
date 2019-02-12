@@ -28,7 +28,7 @@ public class ExpandableUseActivity extends BaseActivity {
         setTitle("ExpandableItem Activity");
         setContentView(R.layout.activity_expandable_item_use);
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.rv);
+        mRecyclerView = findViewById(R.id.rv);
 
         list = generateData();
         adapter = new ExpandableItemAdapter(list);

@@ -29,7 +29,7 @@ public class SectionMultipleItemUseActivity extends BaseActivity {
         setContentView(R.layout.activity_section_uer);
         setBackBtn();
         setTitle("SectionMultiple Use");
-        mRecyclerView = (RecyclerView) findViewById(R.id.rv_list);
+        mRecyclerView = findViewById(R.id.rv_list);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // 1. create entityList which item data extend SectionMultiEntity

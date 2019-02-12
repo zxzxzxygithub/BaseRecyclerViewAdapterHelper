@@ -28,7 +28,7 @@ public class SectionUseActivity extends BaseActivity {
         setContentView(R.layout.activity_section_uer);
         setBackBtn();
         setTitle("Section Use");
-        mRecyclerView = (RecyclerView) findViewById(R.id.rv_list);
+        mRecyclerView = findViewById(R.id.rv_list);
         mRecyclerView.setLayoutManager(new GridLayoutManager(this,2));
         mRecyclerView.addItemDecoration(new GridSectionAverageGapItemDecoration(50,20,20,20));
         mData = DataServer.getSampleData();

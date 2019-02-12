@@ -24,7 +24,7 @@ public class EmptyViewUseActivity extends BaseActivity implements View.OnClickLi
         setTitle("EmptyView Use");
         setContentView(R.layout.activity_empty_view_use);
         findViewById(R.id.btn_reset).setOnClickListener(this);
-        mRecyclerView = (RecyclerView) findViewById(R.id.rv_list);
+        mRecyclerView = findViewById(R.id.rv_list);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 

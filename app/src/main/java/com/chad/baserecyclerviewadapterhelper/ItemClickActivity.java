@@ -29,7 +29,7 @@ public class ItemClickActivity extends BaseActivity {
         setBackBtn();
         setTitle("ItemClickActivity Activity");
         setContentView(R.layout.activity_item_click);
-        mRecyclerView = (RecyclerView) findViewById(R.id.list);
+        mRecyclerView = findViewById(R.id.list);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         initAdapter();
         adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {

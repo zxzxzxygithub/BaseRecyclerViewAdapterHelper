@@ -29,7 +29,7 @@ public class HeaderAndFooterUseActivity extends BaseActivity {
         setTitle("HeaderAndFooter Use");
 
         setContentView(R.layout.activity_header_and_footer_use);
-        mRecyclerView = (RecyclerView) findViewById(R.id.rv_list);
+        mRecyclerView = findViewById(R.id.rv_list);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         initAdapter();
 
@@ -58,7 +58,7 @@ public class HeaderAndFooterUseActivity extends BaseActivity {
     private View getHeaderView(int type, View.OnClickListener listener) {
         View view = getLayoutInflater().inflate(R.layout.head_view, (ViewGroup) mRecyclerView.getParent(), false);
         if (type == 1) {
-            ImageView imageView = (ImageView) view.findViewById(R.id.iv);
+            ImageView imageView = view.findViewById(R.id.iv);
             imageView.setImageResource(R.mipmap.rm_icon);
         }
         view.setOnClickListener(listener);
@@ -68,7 +68,7 @@ public class HeaderAndFooterUseActivity extends BaseActivity {
     private View getFooterView(int type, View.OnClickListener listener) {
         View view = getLayoutInflater().inflate(R.layout.footer_view, (ViewGroup) mRecyclerView.getParent(), false);
         if (type == 1) {
-            ImageView imageView = (ImageView) view.findViewById(R.id.iv);
+            ImageView imageView = view.findViewById(R.id.iv);
             imageView.setImageResource(R.mipmap.rm_icon);
         }
         view.setOnClickListener(listener);

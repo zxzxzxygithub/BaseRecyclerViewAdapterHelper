@@ -31,7 +31,7 @@ public class AnimationUseActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adapter_use);
-        mRecyclerView = (RecyclerView) findViewById(R.id.rv_list);
+        mRecyclerView = findViewById(R.id.rv_list);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         initAdapter();
@@ -41,7 +41,7 @@ public class AnimationUseActivity extends Activity {
 
     private void initView() {
 
-        mImgBtn = (ImageView) findViewById(R.id.img_back);
+        mImgBtn = findViewById(R.id.img_back);
         mImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
@@ -81,7 +81,7 @@ public class AnimationUseActivity extends Activity {
     }
 
     private void initMenu() {
-        MaterialSpinner spinner = (MaterialSpinner) findViewById(R.id.spinner);
+        MaterialSpinner spinner = findViewById(R.id.spinner);
         spinner.setItems("AlphaIn", "ScaleIn", "SlideInBottom", "SlideInLeft", "SlideInRight", "Custom");
         spinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
 
@@ -113,7 +113,7 @@ public class AnimationUseActivity extends Activity {
             }
         });
         mAnimationAdapter.isFirstOnly(false);//init firstOnly state
-        SwitchButton switchButton = (SwitchButton) findViewById(R.id.switch_button);
+        SwitchButton switchButton = findViewById(R.id.switch_button);
         switchButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(final CompoundButton buttonView, final boolean isChecked) {

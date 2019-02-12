@@ -40,7 +40,7 @@ public class ItemDragAndSwipeUseActivity extends BaseActivity {
         setContentView(R.layout.activity_item_touch_use);
         setBackBtn();
         setTitle("ItemDrag  And Swipe");
-        mRecyclerView = (RecyclerView) findViewById(R.id.rv_list);
+        mRecyclerView = findViewById(R.id.rv_list);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mData = generateData(50);
         OnItemDragListener listener = new OnItemDragListener() {

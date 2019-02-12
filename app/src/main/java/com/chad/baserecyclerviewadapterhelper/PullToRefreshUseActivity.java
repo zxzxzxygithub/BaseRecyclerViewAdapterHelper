@@ -98,8 +98,8 @@ public class PullToRefreshUseActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mRecyclerView = (RecyclerView) findViewById(R.id.rv_list);
-        mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeLayout);
+        mRecyclerView = findViewById(R.id.rv_list);
+        mSwipeRefreshLayout = findViewById(R.id.swipeLayout);
         mSwipeRefreshLayout.setColorSchemeColors(Color.rgb(47, 223, 189));
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         setTitle("Pull TO Refresh Use");
