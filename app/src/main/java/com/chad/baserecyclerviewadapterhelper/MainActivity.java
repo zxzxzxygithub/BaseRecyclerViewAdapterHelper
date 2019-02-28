@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 
 import com.chad.baserecyclerviewadapterhelper.adapter.HomeAdapter;
 import com.chad.baserecyclerviewadapterhelper.entity.HomeItem;
+import com.chad.baserecyclerviewadapterhelper.entity.MultipleItem;
+import com.chad.baserecyclerviewadapterhelper.entity.NormalMultipleEntity;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 
 import java.util.ArrayList;
@@ -17,7 +19,7 @@ import java.util.ArrayList;
 /**
  * https://github.com/CymChad/BaseRecyclerViewAdapterHelper
  */
-public class HomeActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
     private static final Class<?>[] ACTIVITY = {
             AnimationUseActivity.class, ChooseMultipleItemUseTypeActivity.class,
             HeaderAndFooterUseActivity.class, PullToRefreshUseActivity.class,
@@ -46,7 +48,7 @@ public class HomeActivity extends AppCompatActivity {
 
     private void initView() {
         mRecyclerView = findViewById(R.id.rv_list);
-        mRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        mRecyclerView.setLayoutManager(new GridLayoutManager(this, 3));
     }
 
     @SuppressWarnings("unchecked")
@@ -58,11 +60,19 @@ public class HomeActivity extends AppCompatActivity {
         homeAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                Intent intent = new Intent(HomeActivity.this, ACTIVITY[position]);
+                Intent intent = new Intent(MainActivity.this, ACTIVITY[position]);
                 startActivity(intent);
             }
         });
-
+        homeAdapter.setSpanSizeLookup(new BaseQuickAdapter.SpanSizeLookup() {
+            @Override
+            public int getSpanSize(GridLayoutManager gridLayoutManager, int position) {
+                if(position%2==0){
+                    return 2;
+                }
+               return 1;
+            }
+        });
         mRecyclerView.setAdapter(homeAdapter);
     }
 
